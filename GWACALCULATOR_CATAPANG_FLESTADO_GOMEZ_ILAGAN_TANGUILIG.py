@@ -497,6 +497,67 @@ if response1==1:
         while response!=1 and response!=2:
             response=int(input("Please enter 1 or 2: "))
 elif response1==2:
-    print("This part is still under construction and is not yet finished")
+    subjects=["Math 3","Math 2","ADTECH","SocSci","Biology","Chemistry","Physics","Earth Science","PEHM","Filipino","Computer Science","English","Values Education"]
+    grades = [0] * 12
+    gradesformatted=[]
+    valid_grades = [1.00, 1.25, 1.50, 1.75, 2.00, 2.25, 2.50, 2.75, 3.00, 4.00, 5.00]
+    print("Please input your grades and only pick from 1.00,1.25,1.50,1.75,2.00,2.25,2.50,2.75,3.00,4.00, and 5.00 unless its Values Education")
+    g = 0
+    for i in range(13):
+        print(f"{subjects[i]}:")
+        subject=subjects[i]
+        if subject==subjects[12]:
+            status=input("Please input complete or incomplete:")
+            while status!="complete" and status!="incomplete":
+                status=input("Please input only complete or incomplete: ")
+        else:
+            grade=float(input("Please input your grade: "))
+            while grade not in valid_grades:
+                print("Invalid grade please input your grade again")
+                grade=float(input(f"{subjects[i]}: "))
+            grades[g]=round(grade,2)
+            g += 1
+    if status=="complete":
+        print(f"""{subjects[0]}: {grades[0]}
+              {subjects[1]}: {grades[1]}
+              {subjects[2]}: {grades[2]}
+              {subjects[3]}: {grades[3]}
+              {subjects[4]}: {grades[4]}
+              {subjects[5]}: {grades[5]}
+              {subjects[6]}: {grades[6]}
+              {subjects[7]}: {grades[7]}
+              {subjects[8]}: {grades[8]}
+              {subjects[9]}: {grades[9]}
+              {subjects[10]}: {grades[10]}
+              {subjects[11]}: {grades[11]}
+              {subjects[12]}: {status}""")
+        TotalGWA=sum(grades)/len(grades)
+        TotalGWA=round(TotalGWA,2)
+        if TotalGWA<=1.50:
+            print(f"Final GWA: {TotalGWA}, Congrats you are apart of the Director's List")
+        else:
+            print(f"Final GWA: {TotalGWA}")
+        
+    else:
+        print(f"""{subjects[0]}: {grades[0]}
+              {subjects[1]}: {grades[1]}
+              {subjects[2]}: {grades[2]}
+              {subjects[3]}: {grades[3]}
+              {subjects[4]}: {grades[4]}
+              {subjects[5]}: {grades[5]}
+              {subjects[6]}: {grades[6]}
+              {subjects[7]}: {grades[7]}
+              {subjects[8]}: {grades[8]}
+              {subjects[9]}: {grades[9]}
+              {subjects[10]}: {grades[10]}
+              {subjects[11]}: {grades[11]}
+              {subjects[12]}: {status}""")
+        TotalGWA=sum(grades)/len(grades)
+        TotalGWA=round(TotalGWA,2)
+        print(f"Final GWA: {TotalGWA}(Probationary Status: Please complete your VE requirements)")
+  
+
+              
+                    
 print("Thank you for using our program")
 input("The program is closing, Press anything to exit")
