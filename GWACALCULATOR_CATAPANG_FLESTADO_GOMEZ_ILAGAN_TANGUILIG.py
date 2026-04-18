@@ -518,18 +518,18 @@ elif response1==2:
             grades[g]=round(grade,2)
             g += 1
     if status=="complete":
-        print(f"""{subjects[0]}: {grades[0]}
-              {subjects[1]}: {grades[1]}
-              {subjects[2]}: {grades[2]}
-              {subjects[3]}: {grades[3]}
-              {subjects[4]}: {grades[4]}
-              {subjects[5]}: {grades[5]}
-              {subjects[6]}: {grades[6]}
-              {subjects[7]}: {grades[7]}
-              {subjects[8]}: {grades[8]}
-              {subjects[9]}: {grades[9]}
-              {subjects[10]}: {grades[10]}
-              {subjects[11]}: {grades[11]}
+        print(f"""{subjects[0]}: {grades[0]:.2f}
+              {subjects[1]}: {grades[1]:.2f}
+              {subjects[2]}: {grades[2]:.2f}
+              {subjects[3]}: {grades[3]:.2f}
+              {subjects[4]}: {grades[4]:.2f}
+              {subjects[5]}: {grades[5]:.2f}
+              {subjects[6]}: {grades[6]:.2f}
+              {subjects[7]}: {grades[7]:.2f}
+              {subjects[8]}: {grades[8]:.2f}
+              {subjects[9]}: {grades[9]:.2f}
+              {subjects[10]}: {grades[10]:.2f}
+              {subjects[11]}: {grades[11]:.2f}
               {subjects[12]}: {status}""")
         TotalGWA=sum(grades)/len(grades)
         TotalGWA=round(TotalGWA,2)
@@ -539,18 +539,18 @@ elif response1==2:
             print(f"Final GWA: {TotalGWA}")
         
     else:
-        print(f"""{subjects[0]}: {grades[0]}
-              {subjects[1]}: {grades[1]}
-              {subjects[2]}: {grades[2]}
-              {subjects[3]}: {grades[3]}
-              {subjects[4]}: {grades[4]}
-              {subjects[5]}: {grades[5]}
-              {subjects[6]}: {grades[6]}
-              {subjects[7]}: {grades[7]}
-              {subjects[8]}: {grades[8]}
-              {subjects[9]}: {grades[9]}
-              {subjects[10]}: {grades[10]}
-              {subjects[11]}: {grades[11]}
+        print(f"""{subjects[0]}: {grades[0]:.2f}
+              {subjects[1]}: {grades[1]:.2f}
+              {subjects[2]}: {grades[2]:.2f}
+              {subjects[3]}: {grades[3]:.2f}
+              {subjects[4]}: {grades[4]:.2f}
+              {subjects[5]}: {grades[5]:.2f}
+              {subjects[6]}: {grades[6]:.2f}
+              {subjects[7]}: {grades[7]:.2f}
+              {subjects[8]}: {grades[8]:.2f}
+              {subjects[9]}: {grades[9]:.2f}
+              {subjects[10]}: {grades[10]:.2f}
+              {subjects[11]}: {grades[11]:.2f}
               {subjects[12]}: {status}""")
         TotalGWA=sum(grades)/len(grades)
         TotalGWA=round(TotalGWA,2)
